@@ -21,7 +21,9 @@ module.exports = function (api) {
   const dev = api.caller(getIsDev);
 
   return {
-    plugins: [],
+    plugins: [
+      '@babel/plugin-transform-modules-commonjs'
+    ],
     presets: [
       // Expo's babel preset
       'babel-preset-expo',

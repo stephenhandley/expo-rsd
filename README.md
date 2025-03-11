@@ -16,8 +16,26 @@ At this point, the app runs and renders as expected via `npm run web`. This is w
 ```
 npm install --save-dev autoprefixer
 ```
+6. Update postcss.config.js to remove the `src` prefix for the include path and node_modules example
 
-At this point the app fails to load `_interop
+I then get the following error
+```
+Web Bundling failed 2384ms index.js (326 modules)
+ ERROR  stylex.css: ~/expo-rsd/node_modules/postcss-react-strict-dom/src/index.ts: `export = <value>;` is only supported when compiling modules to CommonJS.
+Please consider using `export default <value>;`, or add @babel/plugin-transform-modules-commonjs to your Babel config.
+  115 | plugin.postcss = true
+  116 |
+> 117 | export = plugin
+      | ^^^^^^^^^^^^^^^
+  118 |
+› Detected a change in babel.config.js. Restart the server to see the new results. You may need to clear the bundler cache with the --clear flag for your changes to take effect.
+```
+and install add that plugin in babel.config.js
+```
+npm install --save-dev @babel/plugin-transform-modules-commonjs
+``` 
+
+At this point the app still builds but then fails to render with `_interopRequireDefault is not a function`:
 ```
 HMRClient.ts:11 Uncaught TypeError: _interopRequireDefault is not a function
     at HMRClient.ts:11:1
@@ -32,7 +50,7 @@ HMRClient.ts:11 Uncaught TypeError: _interopRequireDefault is not a function
     at loadModuleImplementation (require.js:277:5)
 ```
 
-If I comment out this line on `metro.config.js` the app will render, but unsuprisingly importing from react-strict-dom will fail.
+If I comment out this line on `metro.config.js` the app will render, but then unsurprisingly can't import react-strict-dom components
 ```
 config.resolver.unstable_enablePackageExports = true;
 ```
