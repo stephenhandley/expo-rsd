@@ -9,19 +9,22 @@
     "web": "expo start --web"
   },
   "dependencies": {
+    "@expo/metro-runtime": "4.0.2-canary-20250306-d9d3e02",
     "expo": "53.0.0-canary-20250306-d9d3e02",
     "expo-status-bar": "2.0.2-canary-20250306-d9d3e02",
     "react": "19.0.0",
-    "react-native": "0.78.0",
     "react-dom": "19.0.0",
+    "react-native": "0.78.0",
     "react-native-web": "~0.19.13",
-    "@expo/metro-runtime": "4.0.2-canary-20250306-d9d3e02"
+    "react-strict-dom": "^0.0.34"
   },
   "overrides": {
     "react": "19.0.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.20.0"
+    "@babel/core": "^7.20.0",
+    "autoprefixer": "^10.4.21",
+    "postcss-react-strict-dom": "^0.0.6"
   },
   "private": true
 }
