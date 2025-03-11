@@ -12,7 +12,10 @@
     "expo": "53.0.0-canary-20250306-d9d3e02",
     "expo-status-bar": "2.0.2-canary-20250306-d9d3e02",
     "react": "19.0.0",
-    "react-native": "0.78.0"
+    "react-native": "0.78.0",
+    "react-dom": "19.0.0",
+    "react-native-web": "~0.19.13",
+    "@expo/metro-runtime": "4.0.2-canary-20250306-d9d3e02"
   },
   "overrides": {
     "react": "19.0.0"
