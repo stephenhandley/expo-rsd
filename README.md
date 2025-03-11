@@ -9,7 +9,7 @@ npx create-expo-app expo-rsd --template blank@canary
 npx expo install react-dom react-native-web @expo/metro-runtime
 ```
 
-This is where the `main` branch is currently at. Branch `rsd` off that has these additional steps
+At this point, the app runs and renders as expected via `npm run web`. This is where the [ad3ce6](https://github.com/stephenhandley/expo-rsd/commit/ad3ce6fe6ef912e02a85d0bfb7b46c423eadc5ce) commit is at. Branch and PR for `rsd` added these additional steps.
 
 4. Following processes in React Strict Dom docs for [installation](https://facebook.github.io/react-strict-dom/learn/installation/) and [environment setup](https://facebook.github.io/react-strict-dom/learn/setup/)
 5. Installing autoprefixer
