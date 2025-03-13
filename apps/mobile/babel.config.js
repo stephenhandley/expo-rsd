@@ -1,4 +1,4 @@
-const reactStrictPreset = require('react-strict-dom/babel-preset');
+const reactStrictBabelPreset = require('react-strict-dom/babel-preset');
 
 function getPlatform(caller) {
   // This information is populated by Expo
@@ -20,19 +20,18 @@ module.exports = function (api) {
   const platform = api.caller(getPlatform);
   const dev = api.caller(getIsDev);
 
-  console.log("PLATFORM", platform);
-  console.log("DEV", dev);
+  console.log(`Platform is ${platform} and dev is ${dev}`);
 
   return {
     plugins: [],
     presets: [
-      [reactStrictPreset, {
+      'babel-preset-expo',
+      [reactStrictBabelPreset, {
         debug: dev,
         dev,
-        platform, 
-        runtime: false
+        platform,
+        rootDir: process.cwd()
       }],
-      'babel-preset-expo'
     ]
   };
 };

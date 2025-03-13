@@ -28,8 +28,9 @@ export default function TabOneScreen() {
 
 const styles = css.create({
   button: {
-    fontSize: 200,
+    fontSize: 100,
     cursor: 'pointer',
+    backgroundColor: 'blue',
   },
   container: {
     padding: 20,

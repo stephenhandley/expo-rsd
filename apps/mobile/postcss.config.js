@@ -1,13 +1,15 @@
-const path = require('path');
+const path = require("path");
+const monorepoRoot = path.resolve(__dirname, '../../');
 
 module.exports = {
     plugins: {
-        'postcss-react-strict-dom': {
+        "postcss-react-strict-dom": {
             include: [
-                // Include source files to watch for style changes
-                'src/**/*.{js,jsx,mjs,ts,tsx}',
-                path.resolve(__dirname, '../../packages/ui/src/**/*.{js,jsx,ts,tsx}')
-            ]
+                "src/**/*.{js,jsx,mjs,ts,tsx}",
+                path.resolve(monorepoRoot, "packages/ui/src/**/*.{js,jsx,ts,tsx}")
+            ],
+            rootDir: monorepoRoot,
+            debug: true
         },
         autoprefixer: {}
     }

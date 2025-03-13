@@ -6,7 +6,9 @@ import styles from "./page.module.css";
 
 const moreStyles = css.create({
   button: {
-    backgroundColor: 'red',
+    fontSize: 100,
+    cursor: 'pointer',
+    backgroundColor: 'blue',
   }
 });
 

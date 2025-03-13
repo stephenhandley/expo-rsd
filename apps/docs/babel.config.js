@@ -23,7 +23,7 @@ module.exports = function (api) {
           },
         },
       ],
-      [reactStrictPreset, { debug: false }],
+      [reactStrictPreset, { debug: true }],
     ],
   };
 }; 
