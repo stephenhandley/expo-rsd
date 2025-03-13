@@ -1,5 +1,5 @@
 # Expo + React Strict Dom + Turborepo 
-Working in progress trying to get [Expo](https://expo.dev/) and [Next](https://nextjs.org/) working with [React Strict Dom](https://github.com/facebook/react-strict-dom) inside [Turborepo](https://turbo.build/). Barely working as of now and still somewhat of a mess. Uses Expo's [tabs template](https://github.com/expo/expo/tree/main/templates/expo-template-tabs) inside a [Turbo](https://turbo.build/repo/docs) monorepo using their [basic template](https://github.com/vercel/turborepo/tree/main/examples/basic).
+Work in progress trying to get [Expo](https://expo.dev/) and [Next](https://nextjs.org/) working with [React Strict Dom](https://github.com/facebook/react-strict-dom) inside [Turborepo](https://turbo.build/). Barely working as of now and still somewhat of a mess. Uses Expo's [tabs template](https://github.com/expo/expo/tree/main/templates/expo-template-tabs) inside a [Turbo](https://turbo.build/repo/docs) monorepo using their [basic template](https://github.com/vercel/turborepo/tree/main/examples/basic).
 
 ![screenshot](./screenshot.png)
  
