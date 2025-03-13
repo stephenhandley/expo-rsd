@@ -24,6 +24,7 @@ export default function Home() {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
+        <h1>WEB</h1>
         <Button onClick={() => alert("alert from web next app")}>
           Open alert
         </Button>

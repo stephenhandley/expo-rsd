@@ -23,6 +23,7 @@ const ThemeImage = (props: Props) => {
 export default function Home() {
   return (
     <div className={styles.page}>
+      <h1>DOCS</h1>
       <main className={styles.main}>
         <Button onClick={() => alert("alert from docs next app")}>
           Open alert
