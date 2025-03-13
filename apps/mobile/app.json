@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "expo-tabs-rsd",
-    "slug": "expo-tabs-rsd",
+    "name": "expo-rsd",
+    "slug": "expo-rsd",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./src/assets/images/icon.png",
@@ -32,6 +32,9 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "metro": {
+      "config": "./metro.config.js"
     }
   }
 }

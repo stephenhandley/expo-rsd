@@ -1,14 +1,24 @@
 import { html, css } from 'react-strict-dom';
+import { Button } from '@repo/ui/button';
 
 export default function TabOneScreen() {
   return (
     <html.div style={styles.container}>
-      <html.div style={styles.title}>This tab uses react-strict-dom</html.div>
+      <Button 
+        style={styles.button} 
+        onClick={() => alert("Hello from ui button inside expo")}
+      >
+        CLICK
+      </Button>
     </html.div>
   );
 }
 
 const styles = css.create({
+  button: {
+    fontSize: 200,
+    cursor: 'pointer',
+  },
   container: {
     padding: 20,
     fontFamily: 'Helvetica',
