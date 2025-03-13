@@ -20,17 +20,19 @@ module.exports = function (api) {
   const platform = api.caller(getPlatform);
   const dev = api.caller(getIsDev);
 
+  console.log("PLATFORM", platform);
+  console.log("DEV", dev);
+
   return {
     plugins: [],
     presets: [
-      // Expo's babel preset
-      'babel-preset-expo',
-      // React Strict DOM's babel preset
       [reactStrictPreset, {
         debug: dev,
         dev,
-        platform
-      }]
+        platform, 
+        runtime: false
+      }],
+      'babel-preset-expo'
     ]
   };
 };
