@@ -9,7 +9,8 @@ interface ButtonProps {
   style?: any;
 }
 
-const defaultStyles = css.create({
+// Do not name this variable "defaultStyles" 🤯
+const defaultStyles_NOPE = css.create({
   button: {
     padding: 4,
     color: 'white',
@@ -23,13 +24,13 @@ const defaultStyles = css.create({
 });
 
 export function Button({ children, onClick, style = {} }: ButtonProps) {
-  console.log("defaultStyles.button:", defaultStyles.button);
-  console.log("incoming style:", style);
-  console.log("combined style array:", [defaultStyles.button, style]);
+  console.log("defaults:", defaultStyles_NOPE.button);
+  console.log("incoming:", style);
+  console.log("combined:", [defaultStyles_NOPE.button, style]);
 
   return (
     <html.button
-      style={[defaultStyles.button, style]}
+      style={[defaultStyles_NOPE.button, style]}
       onClick={onClick}
     >
       {children}
