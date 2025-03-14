@@ -4,16 +4,11 @@ import { Button } from '@repo/ui/button';
 import { ExpoRsdComponent } from '@/components/ExpoRsdComponent';
 
 export default function TabOneScreen() {
-  console.log('Local styles:', styles);
-  console.log('Button component:', Button);
-
   return (
     <html.div style={styles.container}>
       <Button 
         style={styles.button} 
         onClick={() => {
-          console.log('Style being passed:', styles.button);
-          console.log('Button props:', Button.arguments);
           alert("Hello from ui button inside expo");
         }}
       >
